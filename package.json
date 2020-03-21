@@ -1,0 +1,16 @@
+{
+  "name": "Kaaaaranavaaairus",
+  "version": "1.0.0",
+  "description": "A friendly reminder to wash your hands",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": ["coronavirus"],
+  "homepage": "https://cerna-pedro.github.io/Kaaaaranavaaairus",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
