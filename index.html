@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      html {
+        height: 100%;
+        font-size: 20px;
+      }
+
+      body {
+        background-color: black;
+        min-height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Pacifico', cursive;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+      .first-half {
+        text-align: center;
+      }
+
+      .second-half {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      @-webkit-keyframes turn {
+        from {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes turn {
+        from {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      @-webkit-keyframes shake {
+        0% {
+          -webkit-transform: translate(1%, 1%) rotate(0deg);
+          transform: translate(1%, 1%) rotate(0deg);
+        }
+
+        25% {
+          -webkit-transform: translate(3%, 2%) rotate(15deg);
+          transform: translate(3%, 2%) rotate(15deg);
+        }
+
+        50% {
+          -webkit-transform: translate(-3%, 1%) rotate(0deg);
+          transform: translate(-3%, 1%) rotate(0deg);
+        }
+
+        75% {
+          -webkit-transform: translate(-1%, -1%) rotate(5deg);
+          transform: translate(-1%, -1%) rotate(5deg);
+        }
+
+        100% {
+          -webkit-transform: translate(1%, -2%) rotate(-1deg);
+          transform: translate(1%, -2%) rotate(-1deg);
+        }
+      }
+
+      @keyframes shake {
+        0% {
+          -webkit-transform: translate(1%, 1%) rotate(0deg);
+          transform: translate(1%, 1%) rotate(0deg);
+        }
+
+        25% {
+          -webkit-transform: translate(3%, 2%) rotate(15deg);
+          transform: translate(3%, 2%) rotate(15deg);
+        }
+
+        50% {
+          -webkit-transform: translate(-3%, 1%) rotate(0deg);
+          transform: translate(-3%, 1%) rotate(0deg);
+        }
+
+        75% {
+          -webkit-transform: translate(-1%, -1%) rotate(5deg);
+          transform: translate(-1%, -1%) rotate(5deg);
+        }
+
+        100% {
+          -webkit-transform: translate(1%, -2%) rotate(-1deg);
+          transform: translate(1%, -2%) rotate(-1deg);
+        }
+      }
+
+      .virus {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 70px;
+        border-radius: 50%;
+        -webkit-animation: turn 10s linear infinite;
+        animation: turn 10s linear infinite;
+        cursor: pointer;
+      }
+
+      .virus:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: url(./images/virus_transparent.png) no-repeat center center;
+      }
+
+      .shake {
+        -webkit-animation: shake 0.5s;
+        animation: shake 0.5s;
+      }
+    </style>
+    <link
+      rel="shortcut icon"
+      href="./images/microbe-192x192.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <title>Kaaaaranavaaairus!!!!!!!!!!!</title>
+  </head>
+  <body>
+    <div class="first-half">
+      <h1>tap that virus👇🏽</h1>
+      <h5>(PS, turn your volume up 🔈🔉🔊)</h5>
+    </div>
+    <div class="second-half">
+      <div class="virus">
+        <audio src="./audio/1.mp3" type="audio/mpeg"></audio>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
